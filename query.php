@@ -5,7 +5,7 @@ ini_set("default_socket_timeout", 10);
 $url = guessUrl($_POST["url"]);
 if(get_headers($url) != false){
 	$chs = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
-	$conn = mysqli_connect("localhost", "kilo", "Kevin310402!");
+	$conn = mysqli_connect("localhost", "kilo", trim(file_get_contents(".password")));
 	$id = "";
 
 	if(!$conn)

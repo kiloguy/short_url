@@ -9,4 +9,4 @@ For Nginx server, add following rewrite rule into the server block in config fil
 rewrite ^/([a-zA-Z0-9]+)$ /?id=$1 last;
 ```
 
-[Demo site](http://172.105.209.203:8001/)
+[Demo site](https://s.kiloapp.cc)

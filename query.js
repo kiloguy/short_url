@@ -48,9 +48,16 @@ $(document).ready(function(){
 			},
 			function(data, status){
 				if(data.substr(0, 7) == "SUCCESS"){
-					$("#alert-content").html("<div>縮網址成功:</div><div><b>http://r.thekilo.cc/" + data.substr(7, 6) + "</b></div><div>轉址至</div><div><b>" + data.substr(13) + "</b></div>");
-					$("#buffer a").text("http://r.thekilo.cc/" + data.substr(7, 6));
-					$("#buffer a").attr("href", "http://r.thekilo.cc/" + data.substr(7, 6));
+					let newURL = "https://s.kiloapp.cc/" + data.substr(7, 6);
+
+					$("#alert-content").html(`
+						<div>縮網址成功:</div>
+						<div><b>${newURL}</b></div>
+						<div>轉址至</div>
+						<div><b>${data.substr(13)}</b></div>
+					`);
+					$("#buffer a").text(newURL);
+					$("#buffer a").attr("href", newURL);
 					$("#copy").attr("data-clipboard-text", $("#buffer a").text());
 					$("#buffer").fadeIn("fast");
 				}

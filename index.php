@@ -2,7 +2,7 @@
 $row = NULL;
 $status = "INDEX";
 if(isset($_GET["id"])){
-	$conn = mysqli_connect("localhost", "kilo", "Kevin310402!");
+	$conn = mysqli_connect("localhost", "kilo", trim(file_get_contents(".password")));
 	if(!$conn)
 		$status = "MYSQL_CONN_FAIL";
 	else{
@@ -31,7 +31,7 @@ if(isset($_GET["id"])){
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-	<div id="title" class="user-select-none">縮網址<small>r.thekilo.cc</small></div>
+	<div id="title" class="user-select-none">縮網址</div>
 	<div id="wrapper">
 		<div id="index">
 			<input id="url" placeholder="在此貼上原網址" spellcheck="false" autocomplete="off">
