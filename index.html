@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>縮網址</title>
+	<meta charset="utf-8">
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
+	<script src="index.js"></script>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<div id="title" class="user-select-none">縮網址</div>
+	<div id="wrapper">
+		<div id="index">
+			<input id="url" placeholder="在此貼上原網址" spellcheck="false" autocomplete="off">
+			<button id="start">開始</button>
+			<div style="clear: both;"></div>
+			<div id="loading">進行中</div>
+			<div id="buffer">
+				<div>新網址為</div>
+				<a id="new-link" target="_blank"></a>
+				<button id="copy" data-clipboard-text="">複製到剪貼簿</button>
+			</div>
+			<div id="dialog">
+				<div id="dialog-content"></div>
+				<button id="dialog-close">關閉</button>
+			</div>
+			<div id="mask"></div>
+		</div>
+
+		<div id="emoji" class="user-select-none">(ﾟ皿ﾟﾒ)</div>
+	</div>
+</body>
+</html>

@@ -1,60 +1,62 @@
-*{
+* {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	outline: none;
-	font-family: 'Lato', 'Noto Sans TC', sans-serif;
-	font-weight: lighter;
+	font-family: 'Noto Sans TC', sans-serif;
+	color: #222;
 }
 
-body{
+body {
 	background-color: ghostwhite;
 }
 
-#wrapper{
+#wrapper {
 	padding: 0px 15px;
 }
 
-input{
+input {
 	display: block;
 }
 
-button{
+button {
 	display: block;
 	cursor: pointer;
 }
 
-div{
+div {
 	font-size: 16px;
 }
 
-b{
+b {
 	font-weight: bold;
 }
 
-.user-select-none{
+.user-select-none {
 	-webkit-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
 }
 
-#title{
+#title {
 	color: ghostwhite;
 	background: indianred;
 	font-size: 30px;
 	padding: 18px 15px;
 	cursor: default;
+	letter-spacing: 3px;
+	font-weight: bold;
 }
 
-#title small{
+#title small {
 	margin-left: 6px;
 	font-size: 22px;
 }
 
-#url{
+#url {
 	width: calc(100% - 65px);
 	float: left;
-	height: 30px;
+	height: 35px;
 	border: none;
 	border-bottom: lightgray 1px solid;
 	padding: 5px;
@@ -63,10 +65,10 @@ b{
 	font-size: 17px;
 }
 
-#search{
+#start {
 	width: 60px;
 	float: right;
-	height: 30px;
+	height: 35px;
 	background: cadetblue;
 	color: ghostwhite;
 	border: none;
@@ -74,50 +76,47 @@ b{
 	border-radius: 3px;
 }
 
-#index{
+#index {
 	margin-top: 25px;
 }
 
-#loading {
+#loading  {
 	text-align: center;
 	position: fixed;
 	top: 50%;
 	right: 0;
 	width: 100%;
 	font-size: 20px;
+	display: none;
 }
 
-#alert{
+#dialog {
 	position: fixed;
-	left: calc(50% - 150px);
-	width: 300px;
+	left: calc(50% - 160px);
+	width: 320px;
 	top: calc(50% - 50px);
-	height: 100px;
-	overflow-y: scroll;
-	text-align: center;
 	box-shadow: 0px 0px 5px gray;
 	padding: 15px 10px;
 	border-radius: 3px;
 	z-index: 200;
 	word-break: break-all;
 	background-color: whitesmoke;
+	display: none;
 }
 
-#alert-close{
-	position: fixed;
-	top: calc(50% + 55px);
-	left: calc(50% - 150px);
-	width: 300px;
-	height: 25px;
-	background: cadetblue;
-	color: ghostwhite;
-	border: none;
-	box-shadow: 0px 0px 5px gray;
-	font-size: 16px;
-	border-radius: 3px;
+#dialog-close {
+    width: 60px;
+    margin: 20px auto 0px auto;
+    height: 30px;
+    background: cadetblue;
+    color: ghostwhite;
+    border: none;
+    box-shadow: 0px 0px 5px gray;
+    font-size: 16px;
+    border-radius: 3px;
 }
 
-#mask{
+#mask {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -126,31 +125,33 @@ b{
 	background: black;
 	opacity: 25%;
 	z-index: 100;
+	display: none;
 }
 
-#buffer{
+#buffer {
 	background: whitesmoke;
 	padding: 15px 10px;
 	margin-top: 10px;
 	border-radius: 3px;
 	position: relative;
+	display: none;
 }
 
-#buffer div{
+#buffer div {
 	margin-bottom: 5px;
 }
 
-#buffer a{
+#buffer a {
 	color: black;
 	text-decoration: none;
 	font-weight: bold;
 }
 
-#buffer a:hover{
+#buffer a:hover {
 	text-decoration: underline;
 }
 
-#copy{
+#copy {
 	position: absolute;
 	top: 5px;
 	right: 5px;
@@ -161,37 +162,18 @@ b{
 	padding: 3px 6px
 }
 
-#mysql-conn-fail{
-	margin-top: 20px;
-}
-
-#id-not-found{
-	margin-top: 20px;
-}
-
-#id-not-found a{
-	text-decoration: none;
-	font-weight: bold;
-	color: black;
-}
-
-#id-not-found a:hover{
-	text-decoration: underline;
-}
-
-#emoji{
+#emoji {
 	position: fixed;
 	top: calc(50% - 66px);
 	left: calc(50% - 155px);
 	font-size: 100px;
 	opacity: 10%;
 	z-index: -1;
-	font-family: 'Lato';
 	font-weight: bold;
 }
 
-@media (min-width: 1024px){
-	#wrapper{
+@media (min-width: 1024px) {
+	#wrapper {
 		width: 800px;
 		margin: auto;
 	}
